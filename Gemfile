@@ -54,6 +54,7 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+gem 'activeadmin', github: 'activeadmin'
 group :development, :test do
   gem 'rspec-rails', '~> 3.4.2'
   gem 'factory_girl_rails'
