@@ -1,0 +1,2 @@
+module GabsHelper
+end
