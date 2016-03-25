@@ -1,12 +1,13 @@
 class GabsController < ApplicationController
   before_action :find_gab, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!, except: [:show]
+  before_action :authenticate_user!, except: [:show]
 
   def index
     @gabs = Gab.order("created_at DESC")
   end
 
   def new
+    @gab = Gab.new
   end
 
   def create

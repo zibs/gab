@@ -56,8 +56,21 @@ gem 'mini_magick'
 gem 'fog'
 gem 'activeadmin', github: 'activeadmin'
 gem 'friendly_id', '~> 5.1.0'
-gem 'bootstrap-wysihtml5-rails', github: 'nerian/bootstrap-wysihtml5-rails'
-gem 'bootstrap-sass', '~> 3.3.6'
+
+gem "figaro"
+
+
+gem 'simple_form'
+# You'll need to include the following dependencies of Summernote
+gem 'bootstrap-sass'
+# This is the right gem to use summernote editor in Rails projects.
+gem 'summernote-rails'
+gem 'codemirror-rails'
+
+# To solve the problems on the turbolinks
+gem 'jquery-turbolinks'
+
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.4.2'
   gem 'factory_girl_rails'
