@@ -75,11 +75,15 @@ gem 'zeroclipboard-rails'
 
 gem 'kaminari'
 
+gem 'cancancan', '~> 1.10'
+
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.4.2'
   gem 'factory_girl_rails'
   gem 'guard-rspec', require: false
   gem 'faker'
+  gem 'pry-rails'
 end
 
 group :development do

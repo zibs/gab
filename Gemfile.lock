@@ -82,6 +82,7 @@ GEM
       thor (~> 0.19)
     builder (3.2.2)
     byebug (8.2.2)
+    cancancan (1.13.1)
     codemirror-rails (5.11)
       railties (>= 3.0, < 5)
     coderay (1.1.1)
@@ -317,6 +318,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     puma (3.2.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
@@ -453,6 +456,7 @@ DEPENDENCIES
   awesome_print
   bootstrap-sass
   byebug
+  cancancan (~> 1.10)
   carrierwave!
   codemirror-rails
   coffee-rails (~> 4.1.0)
@@ -474,6 +478,7 @@ DEPENDENCIES
   kaminari
   mini_magick
   pg (~> 0.15)
+  pry-rails
   puma
   quiet_assets
   rails (= 4.2.6)
