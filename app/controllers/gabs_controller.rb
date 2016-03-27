@@ -3,7 +3,7 @@ class GabsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
 
   def index
-    @gabs = Gab.order("created_at DESC")
+    @gabs = Gab.order("created_at DESC").page(params[:page]).per(10)
   end
 
   def new
@@ -19,13 +19,26 @@ class GabsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def edit
   end
 
   def update
+    if @gab.update(gab_params)
+      redirect_to @gab
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @gab.destroy
+    respond_to do |format|
+      format.html { redirect_to gabs_path, alert: "gab removed" }
+      format.js { render }
+    end
   end
 
     private

@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  root to: "gabs#index"
 
-  resources :gabs 
+  root to: "gabs#index"
+  resources :gabs
   resources :images, only: [:create]
 
   # The priority is based upon order of creation: first created -> highest priority.

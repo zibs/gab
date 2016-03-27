@@ -70,6 +70,10 @@ gem 'codemirror-rails'
 # To solve the problems on the turbolinks
 gem 'jquery-turbolinks'
 
+# Clipboard
+gem 'zeroclipboard-rails'
+
+gem 'kaminari'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4.2'

@@ -31,5 +31,6 @@
 //= require codemirror/modes/slim
 //= require codemirror/modes/php
 //= require summernote
+//= require zeroclipboard
 //= require turbolinks
 //= require_tree .
