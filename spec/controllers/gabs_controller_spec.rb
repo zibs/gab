@@ -67,7 +67,8 @@ RSpec.describe GabsController, type: :controller do
     end
 
     describe "#edit" do
-      context "unauthorized user" do
+      context "unauglg
+      thorized user" do
         let(:user_two){create(:user)}
         let(:gab_two){create(:gab, user_id: user_two)}
 
