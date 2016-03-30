@@ -7,6 +7,8 @@
 @import "codemirror/themes/solarized";
 // globals
 
+$primarybrand: rgba(29, 226, 55, 0.75);
+
 .form-overide.form-control {
   border-top: none;
   border-left: none;
@@ -21,29 +23,23 @@
   background-color: #f9f9f9;
     &:focus {
       border-radius: 0;
-      border-color: rgb(74, 63, 203);
-      box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 2px 1px -8px rgba(3, 111, 255, 0.6);
+      border-color: $primarybrand;
+      box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 2px 1px -8px $primarybrand;
       outline: 0 none;
   }
 }
 
-.form-overide-inline.form-control {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
-  box-shadow: none;
-  margin-bottom: 0;
-  margin: 0 auto;
-  padding-bottom: 0;
-  // line-height: 3.8;
-  // width: 100%;
-  background-color: #f9f9f9;
-    &:focus {
-      border-radius: 0;
-      border-color: rgb(74, 63, 203);
-      box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 2px 1px -8px rgba(3, 111, 255, 0.6);
-      outline: 0 none;
+
+.gab-btn  {
+  color: #1d1c1c;
+  background-color: #ffffff;
+  border-color: $primarybrand;
+  &:hover {
+    color: #1d1c1c;
+    background-color: #ffffff;
+    border-color: $primarybrand;
+    box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 4px $primarybrand;
+    outline: 0 none;
   }
 }
 
@@ -64,15 +60,7 @@ textarea {
   letter-spacing: 0.3px;
 }
 
-#gab-title-style {
-  font-size: 1.65em;
-  font-weight: bold;
-  height: 65px;
-  &:focus {
-   border-color: none;
-   box-shadow: none;
-   }
-}
+
 /* WebKit browsers */
 input:focus::-webkit-input-placeholder { color:transparent; }
     /* Mozilla Firefox 4 to 18 */
@@ -83,36 +71,24 @@ input:focus::-moz-placeholder { color:transparent; }
 input:focus:-ms-input-placeholder { color:transparent; }
 
 #gab-title-style.form-control {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
-  box-shadow: none;
-  margin-bottom: 0;
-  margin: 0 auto;
-  padding-bottom: 0;
+  font-size: 1.65em;
+  font-weight: bold;
+  height: 65px;
   line-height: 3.8;
   width: 80%;
   background-color: #f9f9f9;
-    &:focus {
-      border-radius: 0;
-      border-color: rgb(74, 63, 203);
-      box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 2px 1px -8px rgba(3, 111, 255, 0.6);
-      outline: 0 none;
-  }
+
 }
 
 
-.gab-btn-create, .btn-default:hover, .btn-default.hover {
+ .btn-default:hover, .btn-default.hover {
     color: #1d1c1c;
     background-color: #ffffff;
-    // border-color: #ffc700;
-    // border: 1px solid rgb(74, 63, 203);
-    border-color: rgb(74, 63, 203);
-    box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 8px rgba(3, 111, 255, 0.6);
+    border-color: $primarybrand;
+    box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 8px $primarybrand;
     outline: 0 none;
-
   }
+
 .form-group {
 }
 
@@ -147,10 +123,8 @@ input:focus:-ms-input-placeholder { color:transparent; }
 .zeroclipboard-is-hover {
   color: #1d1c1c;
   background-color: #ffffff;
-  // border-color: #ffc700;
-  // border: 1px solid rgb(74, 63, 203);
-  border-color: rgb(74, 63, 203);
-  box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 4px rgba(3, 111, 255, 0.6);
+  border-color: $primarybrand;
+  box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 4px $primarybrand;
   outline: 0 none;
 }
 
@@ -172,30 +146,6 @@ input:focus:-ms-input-placeholder { color:transparent; }
   &:hover {
     color: rgb(28, 28, 27);
     text-decoration: underline;
-  }
-}
-.edit-gab.btn.btn-primary {
-
-  color: #1d1c1c;
-  background-color: #ffffff;
-  &:hover {
-    color: #1d1c1c;
-    background-color: #ffffff;
-    border-color: rgb(74, 63, 203);
-    box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 4px rgba(3, 111, 255, 0.6);
-    outline: 0 none;
-  }
-}
-.delete-gab.btn.btn-primary {
-
-  color: #1d1c1c;
-  background-color: #ffffff;
-  &:hover {
-    color: #1d1c1c;
-    background-color: #ffffff;
-    border-color: rgb(74, 63, 203);
-    box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 4px rgba(3, 111, 255, 0.6);
-    outline: 0 none;
   }
 }
 
@@ -228,17 +178,6 @@ nav.pagination {
   }
 }
 
-.gab-btn {
-  color: #1d1c1c;
-  background-color: #ffffff;
-  &:hover {
-    color: #1d1c1c;
-    background-color: #ffffff;
-    border-color: rgb(74, 63, 203);
-    box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 4px rgba(3, 111, 255, 0.6);
-    outline: 0 none;
-  }
-}
 #user_email {
   font-size: 1.1em;
 }

@@ -12,6 +12,7 @@ class GabsController < ApplicationController
     @gab = Gab.new
   end
 
+
   def create
     @gab = Gab.new(gab_params)
     @gab.user = current_user
