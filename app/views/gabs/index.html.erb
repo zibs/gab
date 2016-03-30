@@ -1,12 +1,12 @@
-<h1 class="text-center text-muted">gabs</h1>
+<h1 class="text-center text-muted">gabs <span class="text-muted all-gabs-text">(<%= @all_gabs %> total)</span></h1>
 <article class="row list-gabs-wrap">
   <section class="col-md-8 col-md-offset-2">
     <% if @gabs %>
       <% @gabs.each do |gab| %>
         <section class="row gab-info" id = "<%= dom_id(gab) %>">
-          <%= link_to gab.title, gab_path(gab), class: "col-md-6 gab-link" %>
-          <%= link_to "edit", gab_path(gab), class: "col-md-2 edit-gab btn btn-primary" %>
-          <%= link_to "delete", gab_path(gab), method: :delete, remote: true, class: "col-md-2 col-md-offset-1 delete-gab btn btn-primary" %>
+          <strong><%= link_to gab.title, gab_path(gab), class: "col-md-5 col-md-offset-1 gab-link" %></strong>
+          <%= link_to "edit", gab_path(gab), class: "col-md-2 edit-gab btn btn-primary btn-sm"%>
+          <%= link_to "delete", gab_path(gab), method: :delete, remote: true, class: "col-md-2 col-md-offset-1 delete-gab btn btn-primary btn-sm" %>
         </section>
       <% end %>
     <% end %>
@@ -14,6 +14,6 @@
 </article>
 <section class="row">
   <div class="col-md-6 col-md-offset-3 text-center">
-    <%= paginate @gabs %>
+    <%= paginate @gabs, :theme => 'twitter-bootstrap-3' %>
   </div>
 </section>

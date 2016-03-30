@@ -74,7 +74,7 @@ gem 'jquery-turbolinks'
 gem 'zeroclipboard-rails'
 
 gem 'kaminari'
-
+gem 'bootstrap-kaminari-views'
 gem 'cancancan', '~> 1.10'
 
 

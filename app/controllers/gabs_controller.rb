@@ -4,7 +4,8 @@ class GabsController < ApplicationController
   before_action :authorize_user, only: [:edit, :update, :destroy]
 
   def index
-    @gabs = Gab.order("created_at DESC").page(params[:page]).per(10)
+    @gabs = Gab.order("created_at DESC").page(params[:page]).per(8)
+    @all_gabs = Gab.all.length
   end
 
   def new

@@ -10,10 +10,10 @@
 
 <section class="row gab-export">
   <section class="col-md-8 col-md-offset-2 text-center">
-  <button class='my_clip_button btn btn-primary btn-lg text-center' data-clipboard-target='fe_text' data-clipboard-text='Default clipboard text from attribute' id='d_clip_button' title='Click me to copy to clipboard.'>
+  <button class='my_clip_button gab-btn btn btn-primary btn-lg text-center' data-clipboard-target='fe_text' data-clipboard-text='Default clipboard text from attribute' id='d_clip_button' title='Click me to copy to clipboard.'>
     <b>Export to HTML</b>
   </button>
-  <button class='my_clip_button btn btn-primary btn-lg' data-clipboard-target='fe_text' data-clipboard-text='Default clipboard text from attribute' id='b_clip_button' title='Click me to copy to clipboard.'>
+  <button class='my_clip_button gab-btn btn btn-primary btn-lg' data-clipboard-target='fe_text' data-clipboard-text='Default clipboard text from attribute' id='b_clip_button' title='Click me to copy to clipboard.'>
     <b>Export to WordPress</b>
   </button>
   <textarea class = "hidden" cols='1' id='fe_text' rows='1'><%= @gab.body.html_safe %></textarea>
