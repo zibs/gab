@@ -5,8 +5,8 @@
       <% @gabs.each do |gab| %>
         <section class="row gab-info" id = "<%= dom_id(gab) %>">
           <strong><%= link_to gab.title, gab_path(gab), class: "col-md-5 col-md-offset-1 gab-link" %></strong>
-          <%= link_to "edit", gab_path(gab), class: "col-md-2 gab-btn btn btn-primary btn-sm"%>
-          <%= link_to "delete", gab_path(gab), method: :delete, remote: true, class: "col-md-2 col-md-offset-1 gab-btn btn btn-primary btn-sm" %>
+          <%= link_to "edit", gab_path(gab), class: "col-md-2 btn btn-primary btn-sm"%>
+          <%= link_to "delete", gab_path(gab), method: :delete, remote: true, class: "col-md-2 col-md-offset-1 btn btn-primary btn-sm" %>
         </section>
       <% end %>
     <% end %>

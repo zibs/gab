@@ -63,6 +63,7 @@ gem "figaro"
 gem 'simple_form'
 # You'll need to include the following dependencies of Summernote
 gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 # This is the right gem to use summernote editor in Rails projects.
 gem 'summernote-rails'
 gem 'codemirror-rails'
@@ -83,7 +84,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'guard-rspec', require: false
   gem 'faker'
-  gem 'pry-rails'
+  # gem 'pry-rails'
 end
 
 group :development do

@@ -18,7 +18,9 @@ class Gab < ActiveRecord::Base
     private
 
       def append_title_to_body
-        self.body = "<h1 style='text-center'>#{title}</h1><br>#{body}"
+        if self.title_changed?
+          self.body = "<h1 style='text-center'>#{title}</h1><br>#{body}"
+        end
       end
 
       def set_uuid_url

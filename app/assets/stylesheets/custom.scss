@@ -1,13 +1,18 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
+@import "bootswatch/paper/variables";
 @import "bootstrap";
 @import "font-awesome";
 @import "summernote";
 @import "codemirror";
 @import "codemirror/themes/solarized";
-// globals
+// And finally bootswatch style itself
+@import "bootswatch/paper/bootswatch";
 
-$primarybrand: rgba(29, 226, 55, 0.75);
+
+.fade.in {
+  opacity: 0.6;
+}
 
 .form-overide.form-control {
   border-top: none;
@@ -23,8 +28,7 @@ $primarybrand: rgba(29, 226, 55, 0.75);
   background-color: #f9f9f9;
     &:focus {
       border-radius: 0;
-      border-color: $primarybrand;
-      box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 2px 1px -8px $primarybrand;
+
       outline: 0 none;
   }
 }
@@ -33,12 +37,11 @@ $primarybrand: rgba(29, 226, 55, 0.75);
 .gab-btn  {
   color: #1d1c1c;
   background-color: #ffffff;
-  border-color: $primarybrand;
   &:hover {
     color: #1d1c1c;
     background-color: #ffffff;
-    border-color: $primarybrand;
-    box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 4px $primarybrand;
+
+
     outline: 0 none;
   }
 }
@@ -46,6 +49,20 @@ $primarybrand: rgba(29, 226, 55, 0.75);
 body {
   font-family: 'Raleway', sans-serif;
   background-color: #f9f9f9;
+}
+
+// nav
+
+nav.navbar.nav{
+  font-size: 1.25em;
+}
+.nav.navbar-nav.navbar-left {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.nav.navbar-nav.navbar-right {
+  font-size: 1.25em;
+  // font-weight: bold;
 }
 
 // GAB NEW
@@ -77,20 +94,13 @@ input:focus:-ms-input-placeholder { color:transparent; }
   line-height: 3.8;
   width: 80%;
   background-color: #f9f9f9;
-
 }
-
 
  .btn-default:hover, .btn-default.hover {
     color: #1d1c1c;
     background-color: #ffffff;
-    border-color: $primarybrand;
-    box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 8px $primarybrand;
     outline: 0 none;
   }
-
-.form-group {
-}
 
 .note-editor {
   margin-top: 35px;
@@ -103,28 +113,27 @@ input:focus:-ms-input-placeholder { color:transparent; }
 // GAB SHOW
 .preview-gab {
   word-wrap: break-word;
+  h2 {
+    opacity: 0.6;
+    margin-top: 25px;
+    color: rgb(61, 61, 61);
+  }
   p {
-    font-size: 1.3em;
-    line-height: 1.5;
+    font-size: 1.5em;
+    color: rgb(26, 24, 24);
+    line-height: 1.75;
   }
 }
 .gab-export {
   margin-top: 20px;
   button {
     margin: 25px;
-    color: #1d1c1c;
-    background-color: #ffffff;
-    &:hover {
-      color: #1d1c1c;
-      background-color: #ffffff;
-    }
   }
 }
 .zeroclipboard-is-hover {
   color: #1d1c1c;
   background-color: #ffffff;
-  border-color: $primarybrand;
-  box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 4px $primarybrand;
+  box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 4px;
   outline: 0 none;
 }
 
@@ -186,10 +195,11 @@ nav.pagination {
 }
 #user_password_confirmation {
   font-size: 1.1em;
+  margin-bottom: 35px;
 }
 .gab-password-reset {
   margin: 25px 0 35px 0;
 }
 #user_remember_me {
-  margin: 20px 0;
+  // margin: 20px 0;
 }
