@@ -47,7 +47,6 @@ group :development do
   gem 'spring'
 end
 
-
 gem 'delayed_job_active_record'
 gem 'delayed_job_web'
 gem 'font-awesome-rails'

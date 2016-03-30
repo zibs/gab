@@ -17,8 +17,9 @@ class GabsController < ApplicationController
     @gab = Gab.new(gab_params)
     @gab.user = current_user
     if @gab.save
-      redirect_to @gab
+      redirect_to @gab, flash: {success: "gab created"}
     else
+      flash["alert-danger"] = "an error occurred"
       render :new
     end
   end
@@ -33,6 +34,7 @@ class GabsController < ApplicationController
     if @gab.update(gab_params)
       redirect_to @gab
     else
+      flash["alert-danger"] = "an error occurred"
       render :edit
     end
   end

@@ -13,6 +13,9 @@
 .fade.in {
   opacity: 0.6;
 }
+.alert {
+  opacity: 0.7;
+}
 
 .form-overide.form-control {
   border-top: none;
@@ -77,6 +80,9 @@ textarea {
   letter-spacing: 0.3px;
 }
 
+#new_gab {
+  margin-bottom: 30px;
+}
 
 /* WebKit browsers */
 input:focus::-webkit-input-placeholder { color:transparent; }
