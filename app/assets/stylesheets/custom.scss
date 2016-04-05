@@ -68,6 +68,9 @@ nav.navbar.nav{
   font-size: 1.25em;
   // font-weight: bold;
 }
+.navbar-inverse .navbar-nav > li > a {
+  color: rgb(166, 166, 166);
+}
 
 // GAB NEW
 .new-gab {
