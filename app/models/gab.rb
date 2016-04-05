@@ -6,7 +6,7 @@ class Gab < ActiveRecord::Base
   belongs_to :user
 
   after_initialize :set_uuid_url
-  before_save :append_title_to_body
+  before_save :markdownify_title
 
   validates :title, presence: true
   validates :body, presence: true, length: { minimum: 15 }
@@ -17,11 +17,15 @@ class Gab < ActiveRecord::Base
 
     private
 
-      def append_title_to_body
-        if self.title_changed?
-          self.body = "<h1 style='text-center'>#{title}</h1><br>#{body}"
-        end
+    def markdownify_title
+      self.html_title = "<h1 style='text-center'>#{title}</h1>"
+    end
+
+    def append_title_to_body
+      if self.title_changed?
+        self.html_title = "<h1 style='text-center'>#{title}</h1>"
       end
+    end
 
       def set_uuid_url
         self.uuid_url = SecureRandom.urlsafe_base64(16)

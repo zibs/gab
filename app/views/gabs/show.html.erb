@@ -3,6 +3,7 @@
     <article class="preview-gab">
       <h2 class="text-muted text-center navbar-fixed-top">Previewing</h2>
       <%# truncate("#{@gab.body.html_safe}", escape: false, length: 50_000 ) %>
+      <%= @gab.html_title.html_safe %>
       <%= @gab.body.html_safe %>
     </article>
   </section>
@@ -16,6 +17,6 @@
   <button class='my_clip_button btn btn-primary btn-lg' data-clipboard-target='fe_text' data-clipboard-text='Default clipboard text from attribute' id='b_clip_button' title='Click me to copy to clipboard.'>
     <b>Export to WordPress</b>
   </button>
-  <textarea class = "hidden" cols='1' id='fe_text' rows='1'><%= @gab.body.html_safe %></textarea>
+  <textarea class = "hidden" cols='1' id='fe_text' rows='1'><%= @gab.html_title.html_safe %><%= @gab.body.html_safe %></textarea>
 </section>
 </section>
