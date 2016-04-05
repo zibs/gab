@@ -192,7 +192,6 @@ context "authenticated user" do
     end
 
     it "can view a gab on the SHOW page" do
-      binding.pry
       get :show, id: gab
       expect(response).to render_template(:show)
     end

@@ -15,8 +15,8 @@
     <%= simple_form_for(@gab) do |f| %>
       <%= f.input :title, label: false, as: :string, class: "summernote", input_html: { class: 'form-overide form-control', id: "gab-title-style", placeholder: "gab title...."} %>
       <%= f.input :body, label: false, class: 'summernote', input_html: {class: "form-control", placeholder: "content"} %>
-      <%= f.submit class: 'btn btn-primary btn-lg center-block', id: "gab-submit" %>
-      <%= link_to 'Show', @gab, class: 'gab-btn btn btn-primary' if @gab.persisted? %>
+      <%= f.submit class: 'btn btn-primary btn-lg center-block', id: "gab-submit", data: { no_turbolink: true } %>
+      <%# link_to 'Show', @gab, class: 'gab-btn btn btn-primary' if @gab.persisted? %>
     <% end %>
   </section>
 </section>
