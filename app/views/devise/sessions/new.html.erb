@@ -1,7 +1,7 @@
 <section class="centerer login-page row">
 
   <h2 class = "login-header">Log in</h2>
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name),html: { autocomplete: "off" }) do |f| %>
 
       <div class="form-group">
       <%# f.label :email %>

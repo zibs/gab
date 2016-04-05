@@ -57,8 +57,6 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'friendly_id', '~> 5.1.0'
 
 gem "figaro"
-
-
 gem 'simple_form'
 # You'll need to include the following dependencies of Summernote
 gem 'bootstrap-sass'
@@ -76,7 +74,6 @@ gem 'zeroclipboard-rails'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'cancancan', '~> 1.10'
-
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4.2'
