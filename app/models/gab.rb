@@ -7,6 +7,8 @@ class Gab < ActiveRecord::Base
 
   after_initialize :set_uuid_url
   before_save :markdownify_title
+  before_save :check_if_html_title_changed
+
 
   validates :title, presence: true
   validates :body, presence: true, length: { minimum: 15 }
@@ -21,7 +23,7 @@ class Gab < ActiveRecord::Base
       self.html_title = "<h1 style='text-center'>#{title}</h1>"
     end
 
-    def append_title_to_body
+    def check_if_html_title_changed
       if self.title_changed?
         self.html_title = "<h1 style='text-center'>#{title}</h1>"
       end
