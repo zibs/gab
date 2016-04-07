@@ -10,7 +10,6 @@ $brand-primary: darken(#0a0606, 6.5%);
 // And finally bootswatch style itself
 @import "bootswatch/paper/bootswatch";
 
-
 .fade.in {
   opacity: 0.5;
 }
@@ -149,6 +148,37 @@ input:focus:-ms-input-placeholder { color:transparent; }
   background-color: #ffffff;
   box-shadow: 0 1px 1px rgba(3, 179, 255, 0.07) inset, 0 0 4px;
   outline: 0 none;
+}
+
+
+.copied::before {
+  position: absolute;
+  top: 0%;
+  // right: 110%;
+  display: block;
+  content: "copied";
+  font-size: 0.75em;
+  padding: 2px 3px;
+  color: #ffffff;
+  background-color: #42ed91;
+  border-radius: 3px;
+  opacity: 0;
+  will-change: opacity, transform;
+  animation: showcopied 1.5s ease;
+}
+
+@keyframes showcopied {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 

@@ -42,7 +42,23 @@ $(document).on('page:change', function(event) {
     var clip = new ZeroClipboard($("#d_clip_button"));
     var clipword = new ZeroClipboard($("#b_clip_button"));
   });
-  $("#clear-test").on("click", function(){
+    $("#clear-test").on("click", function(){
     $("#copy_text").val("Copy me!");
     $("#testarea").val("");
+
+  });
+// animation after click
+  $(document).ready(function(){
+    $("#d_clip_button").click(function(){
+      $(this).addClass("copied");
+      setTimeout(function(){
+        $(this).removeClass("copied");
+      }.bind(this), 1600);
+    });
+    $("#b_clip_button").click(function(){
+      $(this).addClass("copied");
+      setTimeout(function(){
+        $(this).removeClass("copied");
+      }.bind(this), 1600);
+    });
   });
